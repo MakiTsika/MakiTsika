@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Abhaya+Libre:wght@400;700&display=swap');
+
+/* Overall styles */
 body {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Comfortaa', sans-serif; /* Updated font */
     margin: 0;
     padding: 0;
     color: #fff;
-    background-color: #111;
+    background-color: #111; /* Overall background color */
 }
 
+/* Announcement banner styles */
 .announcement-banner {
     background: #000;
     color: #fff;
@@ -30,36 +34,45 @@ body {
     }
 }
 
+/* Header styles */
 header {
     position: relative;
-    background-color: #000;
+    background-color: #000; /* Default background color for the header */
     color: #fff;
     padding: 1rem;
     text-align: center;
 }
 
+/* Background image */
 .header-background {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('imgs/rolls background.jpg') no-repeat center center;
+    background: url('rolls background.jpg') no-repeat center center;
     background-size: cover;
-    z-index: 1;
-    opacity: 0.5;
+    z-index: 1; /* Make sure the background image is behind the content */
+    opacity: 0.5; /* Optional: adjust transparency */
 }
 
+/* Content inside the header */
 .header-content {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Ensure content is above background image */
 }
 
+/* Logo styling */
 header img {
-    width: 200px;
+    width: 200px; /* Adjust size as needed */
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+/* Navigation styling */
+header nav {
+    margin-top: 1rem;
 }
 
 nav ul {
@@ -77,6 +90,7 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Section and other styles */
 section {
     padding: 4rem 2rem;
     text-align: center;
@@ -87,65 +101,204 @@ section {
 }
 
 .call-button {
-    background-color: #800000;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #800000; /* Dark maroon color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from link */
+    display: inline-block; /* Make it behave like a button */
+    font-size: 16px; /* Font size */
+    font-family: Arial, sans-serif; /* Font family */
+    text-align: center; /* Center the text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
 .call-button:hover {
-    background-color: #660000;
+    background-color: #660000; /* Slightly darker maroon on hover */
 }
 
 .call-button:active {
-    background-color: #4d0000;
+    background-color: #4d0000; /* Even darker maroon when clicked */
 }
+
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.menu-item {
+    background: #000;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.menu-item h3 {
+    color: maroon;
+    margin: 0.5rem 0 0.2rem 0;
+}
+
+.menu-item p {
+    margin: 0.2rem 0;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Flip through styles */
 .flip-through-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    width: 100%;
     position: relative;
+    width: 65%;
+    margin: auto;
+    background: #000;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .flip-through-wrapper {
     display: flex;
-    width: 100%;
-    max-width: 800px;
     overflow: hidden;
+    width: 400px; /* Adjust width as needed */
+    height: 550px; /* Adjust height as needed */
     position: relative;
 }
 
 .flip-image {
     min-width: 100%;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in-out;
 }
 
-.prev-button,
-.next-button {
-    background-color: #333;
+button {
+    background-color: maroon;
     color: #fff;
     border: none;
     padding: 10px;
     cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 10;
 }
 
-.prev-button:hover,
-.next-button:hover {
-    background-color: #555;
+.prev-button {
+    left: 0;
 }
+
+.next-button {
+    right: 0;
+}
+
+button:disabled {
+    background-color: #222;
+    cursor: not-allowed;
+}
+
+/* VorMagazin styles */
+.vormagazin-container {
+    font-family: 'Abhaya Libre', serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.vormagazin-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 20px;
+}
+
+.vormagazin-content h1 {
+    font-size: 3em;
+    color: red;
+    margin-bottom: 0;
+}
+
+.vormagazin-content .magazin {
+    font-size: 1em;
+    color: white;
+}
+
+.vormagazin-content .content {
+    margin-top: 20px;
+}
+
+.vormagazin-content .content p {
+    text-align: justify;
+}
+
+.vormagazin-content .content img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.vormagazin-content .caption {
+    font-size: 0.9em;
+    color: lightgrey;
+    margin-top: 5px;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Space between image and text */
+}
+
+.left-image {
+    max-width: 40%; /* Adjust the image size */
+    height: auto;
+}
+
+.text-content {
+    flex: 1;
+}
+
+ video {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            display: block;
+            margin: 20px auto;
+        }
+
+        #contact iframe {
+            width: 100%;
+            height: 300px;
+            border: 0; heres css file
