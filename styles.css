@@ -117,16 +117,35 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.flip-through-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    position: relative;
+}
 
 .flip-image {
-    display: none;
-    width: 100%;
-    transition: opacity 0.5s ease-in-out;
+    min-width: 100%;
+    transition: transform 0.5s ease;
 }
 
-.flip-image.show {
-    display: block;
-    opacity: 1;
+.prev-button,
+.next-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
 }
 
+.prev-button:hover,
+.next-button:hover {
+    background-color: #555;
+}
