@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Abhaya+Libre:wght@400;700&display=swap');
-
+/* Overall styles */
 body {
     font-family: 'Comfortaa', sans-serif;
     margin: 0;
@@ -8,6 +7,7 @@ body {
     background-color: #111;
 }
 
+/* Announcement banner styles */
 .announcement-banner {
     background: #000;
     color: #fff;
@@ -32,6 +32,7 @@ body {
     }
 }
 
+/* Header styles */
 header {
     position: relative;
     background-color: #000;
@@ -46,7 +47,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('rolls background.jpg') no-repeat center center;
+    background: url('imgs/rolls background.jpg') no-repeat center center;
     background-size: cover;
     z-index: 1;
     opacity: 0.5;
@@ -64,10 +65,6 @@ header img {
     margin: 0 auto;
 }
 
-header nav {
-    margin-top: 1rem;
-}
-
 nav ul {
     list-style: none;
     padding: 0;
@@ -83,6 +80,7 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Section and other styles */
 section {
     padding: 4rem 2rem;
     text-align: center;
@@ -101,7 +99,6 @@ section {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    font-family: Arial, sans-serif;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -123,4 +120,9 @@ section {
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 
+    gap: 1rem;
+}
+
+.menu-item {
+    background: #000;
+    padding: 1rem
