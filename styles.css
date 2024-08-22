@@ -113,13 +113,8 @@ section {
     margin: 0 auto;
 }
 
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-
-.menu-item {
-    background: #000;
-    padding: 1rem;
-}
+.flip-through-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 
