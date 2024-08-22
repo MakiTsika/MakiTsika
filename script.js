@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.flip-image');
     const prevButton = document.querySelector('.prev-button');
     const nextButton = document.querySelector('.next-button');
+    const wrapper = document.querySelector('.flip-through-wrapper');
     let currentIndex = 0;
 
     function showImage(index) {
-        images.forEach((img, i) => {
-            img.style.transform = translateX(-${index * 100}%);
-        });
+        const offset = -index * 100; // Calculate offset based on index
+        wrapper.style.transform = `translateX(${offset}%)`;
     }
 
     function updateButtons() {
@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-  
     showImage(currentIndex);
     updateButtons();
 });
