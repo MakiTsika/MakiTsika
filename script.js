@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showImage(index) {
         images.forEach((img, i) => {
-            img.style.transform = `translateX(-${index * 100}%)`;
+            img.style.display = i === index ? 'block' : 'none';
         });
     }
 
