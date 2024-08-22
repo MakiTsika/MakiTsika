@@ -1,5 +1,3 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.flip-image');
     const prevButton = document.querySelector('.prev-button');
@@ -33,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Initialize
     showImage(currentIndex);
     updateButtons();
 });
