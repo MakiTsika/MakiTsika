@@ -6,8 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentIndex = 0;
 
     function showImage(index) {
-        const offset = -index * 100; // Calculate offset based on index
-        wrapper.style.transform = `translateX(${offset}%)`;
+        requestAnimationFrame(() => {
+            wrapper.style.transform = `translateX(-${index * 100}%)`;
+        });
     }
 
     function updateButtons() {
